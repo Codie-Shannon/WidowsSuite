@@ -1,0 +1,562 @@
+/* Custom Properties */
+/* ===================================== */
+:root{
+    --primary-color: rgb(7, 7, 7);
+    --secondary-color: #222;
+    --tertiary-color: rgb(24, 24, 24);
+
+    --link: rgb(170, 170, 170);
+    --link-used: white;
+    --link-hover: rgb(230, 230, 230);
+
+    /* Form */
+    --input-border: #ccc;
+}
+
+@font-face {
+    font-family: "Custom-Impact";
+
+    src: url("fonts/Impact.woff2") format('woff2'),
+         url("fonts/Impact.woff") format('woff'),
+         url("fonts/Impact.ttf")  format('truetype');
+
+    font-display: swap;
+}
+
+/* Main */
+/* ===================================== */
+body{
+    text-align: center;
+
+    /* Border Color */
+    color: white;
+
+    margin: 0;
+
+    background-color: var(--primary-color);
+
+    /* User Select Off */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Text Styles */
+/* ===================================== */
+h2, p, a, input, select, textarea, button, label, #caption {
+    color: white;
+    font-size: 19px;
+    font-family: 'Custom-Impact';
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+/* Links */
+/* ===================================== */
+a{
+    text-decoration: none;
+
+    color: var(--link);
+}
+
+a:hover{
+    color: var(--link-hover);
+}
+
+/* Background Color */
+/* ===================================== */
+article, #caption, input, select, textarea, button{
+    background-color: var(--secondary-color);
+}
+
+/* Navigation Bar */
+/* ===================================== */
+#navbar{
+    padding: 5px 0;
+
+    /* Position */
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+
+    background-color: var(--tertiary-color);
+}
+
+.default-navlink{
+    margin: 50px 10px;
+
+    line-height: 30px;
+}
+
+#navlink-used{
+    color: var(--link-used);
+
+    border-bottom: solid;
+
+    /* Remove Pointer Events */
+    pointer-events: none;
+}
+
+/* Multipage */
+/* ===================================== */
+.wrapper, article, .thumbnail-wrapper, #caption, .max-width, #mapbtns {
+    width: 100%;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+
+    /* Position */
+    position: fixed;
+    z-index: 3;
+    top: 0;
+
+    /* Alignment */
+    justify-content: center;
+    align-content:center;
+    flex-wrap: wrap;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.wrapper > *, .thumbnail-wrapper > * {
+    margin-top: 1%;
+
+    display: block;
+}
+
+.wrapper:last-child, .thumbnail:last-of-type {
+    margin-bottom: 0.6%;
+}
+
+#nav-logo, #overlay, iframe[name="hidePOST"] {
+    display: none;
+}
+
+#navbar, .page-border, .thumbnail {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+img {
+    display: block;
+}
+
+article p{
+    padding: 0px 30px 20px;
+
+    line-height: 24px;
+}
+
+/* Wallpaper Engine Page */
+/* ===================================== */
+#engine-link, #engine-link-na{
+    margin-top: 2%;
+}
+
+/* Wallpaper Page */
+/* ===================================== */
+/* Video */
+#hideVideobtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    padding: 8px;
+
+    margin: 0;
+
+    border: none;
+
+    /* Position */
+    position: absolute;
+    right: 0;
+
+    /* Needed For Firefox */
+    top: 0;
+}
+
+#hideVideobtn:hover{
+    cursor: pointer;
+}
+
+/* Caption */
+#caption {
+    margin-bottom: 0.5%;
+
+    line-height: 35px;
+}
+
+#caption-P1, #caption-P2{
+    padding: 0 0.5%;
+
+    margin: 0;
+}
+
+/* Thumbnails */
+.thumbnail {
+    opacity: 1;
+}
+
+/* Contact Page */
+/* ===================================== */
+/* Modal */
+#modal{
+    /* Position */
+    position: relative;
+
+    padding: 2% 0;
+
+    background-color: var(--tertiary-color)
+}
+
+#modal > * {
+    margin: 0 0 2% 0;
+}
+
+#modal > p {
+    font-size: 21px;
+}
+
+#modal > button {
+    width: 120px;
+
+    margin: auto;
+}
+
+/* Form */
+form{
+    padding-top: 5px;
+
+    background-color: var(--tertiary-color);
+}
+
+form > h2{
+    margin: 1% 0 3% 0;
+}
+
+input, select, textarea, button, label {
+    font-size: 21px;
+
+    width: 90%;
+}
+
+input, select, textarea, button{
+    /* Size */
+    box-sizing: content-box;
+
+    padding: 5px;
+
+    margin: 5px 0 10px 0;
+
+    border-radius: 3px;
+    border: 1px solid var(--input-border);
+}
+
+textarea{
+    height: 450px;
+}
+
+button{
+    width: 250px;
+
+    cursor: pointer;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus,
+textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus,
+select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+    /* Disable Autocomplete Styling For Form */
+    -webkit-box-shadow: 0 0 0 30px var(--secondary-color) inset !important;
+    -webkit-text-fill-color: white;
+    caret-color: white;
+}
+
+/* Map */
+#mapbtns{
+    text-align: left;
+}
+
+#mapbtns > button{
+    width: 100px;
+
+    border: 2px white solid;
+
+    margin: 8px 0 0 8px;
+
+    cursor: pointer;
+}
+
+#mapbtns:last-child{
+    margin-left: 4px;
+}
+
+#map {
+    height: 560px;
+}
+
+/* Business Details */
+#businessdetails {
+    background-color: #222;
+}
+
+#businessdetails > * {
+    margin: 13px 10px 13px 10px;
+}
+
+/* References Page */
+/* ===================================== */
+#references {
+    text-align: left;
+
+    overflow-wrap: break-word;
+}
+
+#references > * {
+    display: block;
+
+    margin: 0 7px 0 7px;
+
+    padding: 0;
+}
+
+#references:first-child {
+    padding-top: 10px;
+}
+
+#references > h2{
+    font-size: 25px;
+
+    margin-bottom: 5px !important;
+}
+
+.ref-link {
+    margin-bottom: 14.5px !important;
+}
+
+@media only screen and (min-width: 370px) {
+    /* Contact Page */
+    /* ===================================== */
+    /* Form */
+    #message-lbl{
+        text-align: center;
+
+        width: 90%;
+    }
+
+    #mapbtns > button{
+        width: 125px;
+    }
+    
+    /* Map */
+    #map{
+        height: 670px;
+    }
+
+    /* Multipage */
+    /* ===================================== */
+    .default-navlink, .caption{
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width: 561px) {
+    /* Contact Page */
+    /* ===================================== */
+    /* Form */
+    label {
+        text-align: right;
+
+        width: 120px;
+
+        /* Position */
+        display: inline-block;
+
+        padding-right: 15px;
+    }
+
+    .primary-br {
+        display: none;
+    }
+
+    #message-lbl{
+        text-align: center;
+
+        width: 90%;
+    }
+
+    input, select{
+        width: 54%;
+    }
+    
+    /* Map */
+    #mapbtns > button{
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 570px){
+    /* Wallpaper Page */
+    /* ===================================== */
+    #caption, #wallpaper-video{
+        width: 80%;
+    }
+
+    .thumbnail-wrapper{
+        height: 92%;
+
+        /* Alignment */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content:center;
+    }
+
+    /* Multipage */
+    /* ===================================== */
+    .thumbnail, #caption, #wallpaper-video{
+        border: solid white;
+    }
+}
+
+@media only screen and (min-width: 685px) {
+    /* Navigation Bar */
+    /* ===================================== */
+    #navbar {
+        padding: 10px 0;
+    }
+
+    #navlink-br {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    /* Wallpaper Page */
+    /* ===================================== */
+    .thumbnail{
+        width: 48%;
+
+        opacity: 0.7;
+
+        margin: 0.5%;
+    }
+
+    .thumbnail:hover{
+        opacity: 1;
+
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    /* Contact Page */
+    /* ===================================== */
+    /* Modal */
+    #modal > h2 {
+        font-size: 40px;
+    }
+
+    #modal > p {
+        font-size: 25px;
+
+        margin-bottom: 35px;
+    }
+
+    #modal > button {
+        margin: 10px;
+
+        /* Position */
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    /* Form */
+    .secondary-br{
+        display: none;
+    }
+
+    label{
+        padding: 0;
+
+        margin: 0 10px 0 5px;
+    }
+
+    .secondary-label {
+        width: 70px;
+    }
+
+    #subject-label, #subject {
+        width: 90%;
+    }
+
+    #subject-label {
+        text-align: center;
+    }
+
+    input, select {
+        font-size: 20px;
+
+        width: 289px;
+    }
+    
+    /* Map */
+    #map{
+        height: 840px;
+    }
+
+    /* Business Details */
+    #businessdetails{
+        display: flex;
+        justify-content: space-between; 
+    }
+    
+    #businessdetails > * {
+        margin: 5px 10px 5px 10px
+    }
+
+    /* Multipage */
+    /* ===================================== */
+    .wrapper{
+        width: 1000px;
+
+        margin: auto;
+    }
+
+    .page-border{
+        border: solid;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Wallpaper Page */
+    /* ===================================== */
+    .thumbnail{
+        width: 31.5%;
+    }
+}
+
+@media only screen and (min-width: 1270px) {
+    /* Navigation Bar */
+    /* ===================================== */
+    #nav-logo{
+        /* Show */
+        display: block;
+
+        /* Position */
+        position: absolute;
+        padding-left: 19px;
+    }
+
+    #navbar{
+        padding: 2px 0;
+    }
+
+    .default-navlink{
+        line-height: 71px;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preload" as="font" href="fonts/Impact.woff2" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" type="text/css" href="index.css"/>
+
+<script async src="main.js"></script>
+
+<title>Widows Suite - Wallpapers</title>
+</head>
+<body onload="detectWindows()">
+    <!-- Navigation Bar -->
+    <div id="navbar" class="tb-border">
+        <picture id="nav-logo">
+            <source srcset="images/base/logo.webp" type="image/webp">
+            <img src="images/backup/logo.png" alt="Company Logo"/>
+        </picture>
+        <a class="default-navlink" href="index.html">Home</a>
+        <a class="default-navlink" href="Page 2.html">Products</a>
+        <a class="default-navlink" href="Page 3.html">Wallpaper Engine</a>
+        <br id="navlink-br">
+        <a id="navlink-used" class="default-navlink">Wallpapers</a>
+        <a class="default-navlink" href="Page 5.html">Contact</a>
+        <a class="default-navlink" href="Page 6.html">References</a>
+    </div>
+    
+    <!-- Image Gallery -->
+    <div class="thumbnail-wrapper">
+        <!-- Goku -->
+        <picture onclick="showVideo('0'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/goku.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/goku.png" alt="Goku"/>
+        </picture>
+
+        <!-- Mazda RX7 -->
+        <picture onclick="showVideo('1'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/mazda-rx7.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/mazda-rx7.png" alt="Mazda RX7"/>
+        </picture>
+
+        <!-- Spider Man -->
+        <picture onclick="showVideo('2'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/spider-man.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/spider-man.png" alt="Spider Man"/>
+        </picture>
+
+        <!-- Storm King -->
+        <picture onclick="showVideo('3'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/storm-king.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/storm-king.png" alt="Storm King"/>
+        </picture>
+
+        <!-- Venom -->
+        <picture onclick="showVideo('4'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/venom.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/venom.png" alt="Venom"/>
+        </picture>
+
+        <!-- War Machine -->
+        <picture onclick="showVideo('5'); disableScroll();" class="thumbnail">
+            <source srcset="wallpaper-thumbnails/base/war-machine.webp" type="image/webp">
+            <img class="max-width" src="wallpaper-thumbnails/backup/war-machine.png" alt="War Machine"/>
+        </picture>
+    </div>
+
+    <!-- Video Overlay -->
+    <div id="overlay">
+        <p id="hideVideobtn" onclick="hideVideo(); enableScroll();">X</p>
+        <div id="caption" class="page-border">
+            <p id="caption-P1"> </p>
+            <p id="caption-P2"> <a href="downloadable-content/Wallpaper Bundle.zip" download>Download The Bundle Here...</a> </p>
+        </div>
+        <video id="wallpaper-video" class="max-width page-border" autoplay loop muted> <source type="video/mp4"> </video>
+    </div>
+</body>
+</html>
